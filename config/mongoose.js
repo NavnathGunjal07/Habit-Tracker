@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 
-var uri = process.env.MONGOLAB_URI || 'mongodb://localhost/Habbit_Tracker';
 //connecting to database
-mongoose.connect(uri);
+mongoose.connect("mongodb+srv://NavnathGunjal:sidharthgunjal@cluster0.fdrcp.mongodb.net/Habit_Tracker");
 
 const db  = mongoose.connection;
 

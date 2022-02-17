@@ -10,7 +10,6 @@ const session = require('express-session');
 const passport = require('passport')
 const passportLocal = require('./config/passport-local-strategy');
 const passportJWT = require('./config/passport-jwt-strategy');
-var uri = process.env.MONGOLAB_URI || 'mongodb://localhost/Habbit_Tracker';
 const MongoStore = require('connect-mongo');
 
 
@@ -44,7 +43,7 @@ app.use(session({
     cookie: {
         maxAge: (1000 * 60 * 100)
     },
-    store: MongoStore.create({ mongoUrl: uri}),
+    store: MongoStore.create({ mongoUrl: "mongodb+srv://NavnathGunjal:sidharthgunjal@cluster0.fdrcp.mongodb.net/Habit_Tracker"}),
 }));
 
 app.use(passport.initialize());
