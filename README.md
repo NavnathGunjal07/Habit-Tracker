@@ -87,11 +87,6 @@ You project will be running on port--> 8000
 - See weekly view of habbits
 
 
-## Demo
-
-Insert gif or link to demo
-
-
 ## Screenshots
 - Home page Daily View
   ![Screenshot (109)](https://user-images.githubusercontent.com/53387548/154197176-cb8a4de8-ee9e-4555-b312-abb4f9b96d00.png)
