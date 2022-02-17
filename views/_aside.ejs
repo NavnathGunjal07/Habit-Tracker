@@ -1,0 +1,15 @@
+<!-- showing side bar using partials -->
+<aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+      <h2><%= user.name %></h2>
+    </div>
+    <ul class="sidebar-nav">
+      <li id="aside-detail-view" class="active">
+        <a href="#"><i class="fa fa-home"></i>Detailed View</a>
+      </li>
+      <li id="aside-week-view">
+        <a href="#"> <i style="font-size: 1.5rem;margin-right:12%;" class="fas fa-calendar-week"></i>Week View</a>
+      </li>
+      <li><a href="/users/sign-out"><i style="font-size: 1.5rem;margin-right:12%;" class="fas fa-sign-out-alt"></i>Sign Out</a></li>
+    </ul>
+  </aside>

@@ -1,0 +1,26 @@
+   <!-- showing weekview by clicking on week view in side bar -->
+   <li class="habit-list-item">
+        <div class="habit-list-item-name"> <%=habbit.habbitTitle%></div>
+        <% days.forEach(day => { let found = false, status = '';
+        habbit.dates.find(function (item, index) {
+            if(item.date === day.date)
+            {
+                found = true;
+                status = item.complete;
+            }
+        });
+        %>
+        <div class="dotw">
+            <div class="day"><span><%= day.day + ", " + day.date.slice(-2) %></span></div>
+            <a href="/habbits/status-update/?id=<%= habbit._id %>&date=<%= day.date %>" style="margin-top:2%;text-decoration: none;">
+                <% if(found && status==='yes'){ %>
+                Done<i class="fas fa-check-circle"></i>
+                <% } else if(found && status==='no'){ %>
+               Skip<i class="fas fa-times-circle"></i>
+                <% } else { %>
+               None <i class="fas fa-minus-circle"></i>
+                <% } %>
+            </a>
+        </div>
+        <% }) %>
+    </li>
